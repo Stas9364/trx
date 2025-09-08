@@ -1,19 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { portfolioProjects } from "@/app/portfolio/_data/projects";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import {
   Calendar,
-  Users,
-  ExternalLink,
-  Github,
   Cloud,
   Code,
   Database,
   Smartphone,
+  Users
 } from "lucide-react";
-import { portfolioProjects } from "@/app/portfolio/_data/projects";
+import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 
 type Props = { initialSlug: string };
 
