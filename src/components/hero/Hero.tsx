@@ -53,10 +53,9 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              From AI-powered platforms to cloud-native architectures, we
-              deliver
+              From AI-powered platforms to cloud-native architectures, we deliver
               <span className="text-blue-400 font-semibold">
-                mission-critical software
+                {" "} mission-critical software {" "}
               </span>
               with real business outcomes that scale and grow your business.
             </p>
