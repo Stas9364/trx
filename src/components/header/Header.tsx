@@ -28,7 +28,7 @@ export const Header = () => {
             }}
             className="flex items-center"
           >
-            <Link href={'/'} className="text-2xl font-bold text-blue-400">
+            <Link href={"/"} className="text-2xl font-bold text-blue-400">
               TRX Developers
             </Link>
           </MotionWrapper>
@@ -73,7 +73,10 @@ export const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <MobileNavMenu isMenuOpen={isMenuOpen} />
+        <MobileNavMenu
+          isMenuOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+        />
       </div>
     </header>
   );

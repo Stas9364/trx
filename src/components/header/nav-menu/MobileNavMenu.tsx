@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { navItems } from "./nav-items";
 
-export const MobileNavMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
+export const MobileNavMenu = ({
+  isMenuOpen,
+  onClose,
+}: {
+  isMenuOpen: boolean;
+  onClose?: () => void;
+}) => {
   return (
     <>
       {isMenuOpen && (
@@ -11,6 +17,7 @@ export const MobileNavMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={onClose}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium cursor-pointer"
               >
                 {item.name}
@@ -18,7 +25,8 @@ export const MobileNavMenu = ({ isMenuOpen }: { isMenuOpen: boolean }) => {
             ))}
 
             <Link
-              href={"#contact"}
+              href={"/#contact"}
+              onClick={onClose}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 w-fit"
             >
               Get Started
