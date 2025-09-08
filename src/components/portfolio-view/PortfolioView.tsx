@@ -79,26 +79,7 @@ export const PortfolioView = ({ initialSlug }: Props) => {
                 </span>
               </div>
             </div>
-            <div className="flex gap-3">
-              <a
-                href={selectedProject.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
-              <a
-                href={selectedProject.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                <Github className="w-4 h-4" />
-                <span>Code</span>
-              </a>
-            </div>
+
           </div>
 
           {/* Tech Stack */}
