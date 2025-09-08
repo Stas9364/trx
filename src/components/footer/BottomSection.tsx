@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const BottomSection = () => {
   return (
     <div className="border-t border-gray-800 pt-8">
@@ -6,24 +8,18 @@ export const BottomSection = () => {
           &copy; 2024 TRX Developers. All rights reserved.
         </p>
         <div className="flex gap-6 text-sm">
-          <a
-            href="#"
+          <Link
+            href="/privacy-policy"
             className="text-gray-400 hover:text-blue-400 transition-colors"
           >
             Privacy Policy
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="terms-of-use"
             className="text-gray-400 hover:text-blue-400 transition-colors"
           >
-            Terms of Service
-          </a>
-          <a
-            href="#contact"
-            className="text-gray-400 hover:text-blue-400 transition-colors"
-          >
-            Contact Us
-          </a>
+            Terms of Use
+          </Link>
         </div>
       </div>
     </div>

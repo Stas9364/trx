@@ -1,3 +1,4 @@
+import { PortfolioView } from "./portfolio-view/PortfolioView";
 import { Header } from "./header/Header";
 import { HeroSection } from "./hero/Hero";
 import { ExpertiseSection } from "./expertise/Expertise";
@@ -9,6 +10,7 @@ import { TechnologiesSection } from "./tech-stack/TechStack";
 import { WhyChooseSection } from "./why/Why";
 import { Footer } from "./footer/Footer";
 import { MotionWrapper } from "./motion-wrapper/MotionWrapper";
+import { Sidebar } from "./portfolio-sidebar/Sidebar";
 
 export {
   Header,
@@ -22,4 +24,6 @@ export {
   WhyChooseSection,
   Footer,
   MotionWrapper,
+  Sidebar,
+  PortfolioView,
 };

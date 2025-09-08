@@ -1,5 +1,6 @@
 export interface PortfolioProjectDetail {
   id: string;
+  slug: string;
   title: string;
   shortDescription: string;
   fullDescription: string;
@@ -21,6 +22,7 @@ export interface PortfolioProjectDetail {
 export const portfolioProjects: PortfolioProjectDetail[] = [
   {
     id: "project-1",
+    slug: "enterprise-ecommerce-platform",
     title: "Enterprise E-commerce Platform",
     shortDescription:
       "Scalable multi-vendor marketplace handling 100K+ daily transactions",
@@ -64,6 +66,7 @@ export const portfolioProjects: PortfolioProjectDetail[] = [
   },
   {
     id: "project-2",
+    slug: "ai-powered-analytics-dashboard",
     title: "AI-Powered Analytics Dashboard",
     shortDescription:
       "Real-time business intelligence platform with ML predictions",
@@ -114,6 +117,7 @@ export const portfolioProjects: PortfolioProjectDetail[] = [
   },
   {
     id: "project-3",
+    slug: "mobile-banking-application",
     title: "Mobile Banking Application",
     shortDescription: "Secure fintech solution with biometric authentication",
     fullDescription:
@@ -163,6 +167,7 @@ export const portfolioProjects: PortfolioProjectDetail[] = [
   },
   {
     id: "project-4",
+    slug: "healthcare-management-system",
     title: "Healthcare Management System",
     shortDescription:
       "Comprehensive patient management and telemedicine platform",
@@ -206,6 +211,7 @@ export const portfolioProjects: PortfolioProjectDetail[] = [
   },
   {
     id: "project-5",
+    slug: "supply-chain-management-platform",
     title: "Supply Chain Management Platform",
     shortDescription: "End-to-end logistics and inventory optimization system",
     fullDescription:
