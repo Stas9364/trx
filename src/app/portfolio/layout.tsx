@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 
 export default function PortfolioLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="pt-20 px-4 sm:px-6 lg:px-8 inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
       <div className="max-w-7xl mx-auto">
         <MotionWrapper
           as="div"
