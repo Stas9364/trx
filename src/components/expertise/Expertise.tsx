@@ -241,10 +241,10 @@ export const ExpertiseSection = () => {
                 duration: 0.6,
                 delay: 0.1,
               }}
-              className="group relative bg-gray-900 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 overflow-hidden"
+              className="group  relative backdrop-blur-sm bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 overflow-hidden"
             >
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${area.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                className={`absolute  inset-0 bg-gradient-to-br ${area.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               ></div>
 
               <div className="relative z-10">

@@ -117,7 +117,7 @@ export const TeamSection = () => {
         </motion.div>
 
         <div
-          className="relative max-w-4xl mx-auto"
+          className="relative max-w-5xl mx-auto"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
@@ -142,7 +142,7 @@ export const TeamSection = () => {
                   duration: 0.5,
                   ease: "easeInOut",
                 }}
-                className="flex flex-col md:flex-row items-center p-8 md:p-12"
+                className="flex flex-col md:flex-row items-center p-8 md:py-12 md:px-14"
               >
                 {/* Image */}
                 <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-12">
@@ -207,13 +207,13 @@ export const TeamSection = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+              className="absolute left-1 cursor-pointer top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+              className="absolute right-1 cursor-pointer top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
@@ -225,7 +225,7 @@ export const TeamSection = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all cursor-pointer duration-300 ${
                   index === currentIndex
                     ? "bg-blue-500 w-8"
                     : "bg-gray-600 hover:bg-gray-500"

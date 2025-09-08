@@ -37,7 +37,9 @@ export const WhyChooseSection = () => {
     },
   ];
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-gray-900"></div>
+
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{

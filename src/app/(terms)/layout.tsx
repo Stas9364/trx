@@ -6,7 +6,7 @@ export default function TermsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
       <div className="max-w-4xl mx-auto">
         <Link
           href="/"

@@ -53,9 +53,11 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              From AI-powered platforms to cloud-native architectures, we deliver
+              From AI-powered platforms to cloud-native architectures, we
+              deliver
               <span className="text-blue-400 font-semibold">
-                {" "} mission-critical software {" "}
+                {" "}
+                mission-critical software{" "}
               </span>
               with real business outcomes that scale and grow your business.
             </p>
@@ -79,7 +81,7 @@ export const HeroSection = () => {
           >
             <Link
               href={"#contacts"}
-              className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-400 flex items-center justify-center shadow-lg hover:shadow-blue-500/25"
             >
               <span>Start Your Project</span>
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -89,7 +91,7 @@ export const HeroSection = () => {
               className="group border-2 border-blue-500/50 text-blue-400 hover:bg-blue-500/10 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
             >
               <span>View Our Work</span>
-              <Play className="mr-2 w-5 h-5" />
+              <Play className="ml-2 w-5 h-5" />
             </Link>
           </MotionWrapper>
 
@@ -99,11 +101,11 @@ export const HeroSection = () => {
 
           <TrustedBy
             trustedList={[
-              "CRYPTOPAY",
-              "SCALE",
-              "NEXT STREET",
-              "Arcade",
-              "15SOF",
+              { title: "CRYPTOPAY", href: "#", color: "#f4f5fb" },
+              { title: "SCALE", href: "#", color: "" },
+              { title: "NEXT STREET", href: "#", color: "" },
+              { title: "Arcade", href: "#", color: "" },
+              { title: "15SOF", href: "#", color: "" },
             ]}
           />
         </div>
@@ -122,7 +124,7 @@ export const HeroSection = () => {
           duration: 1,
           delay: 1.2,
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-5 left-1/2 transform -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-bounce"></div>

@@ -1,6 +1,13 @@
+import Link from "next/link";
 import MotionWrapper from "../../motion-wrapper/MotionWrapper";
 
-export const TrustedBy = ({ trustedList }: { trustedList: string[] }) => {
+type TrustedItem = {
+  title: string;
+  href: string;
+  color: string;
+};
+
+export const TrustedBy = ({ trustedList }: { trustedList: TrustedItem[] }) => {
   return (
     <MotionWrapper
       as="div"
@@ -21,9 +28,13 @@ export const TrustedBy = ({ trustedList }: { trustedList: string[] }) => {
       </p>
       <div className="flex flex-wrap justify-center items-center gap-12 opacity-40">
         {trustedList.map((item) => (
-          <div key={item} className="text-2xl font-bold text-gray-400">
-            {item}
-          </div>
+          <Link
+            href={item.href}
+            key={item.title}
+            className="text-2xl font-bold  bg-gradient-to-r hover:scale-110 from-gray-700 via-gray-700 to-gray-700 hover:from-blue-400 hover:via-purple-400 hover:to-blue-600 bg-clip-text text-transparent transition-all duration-500 ease-in-out"
+          >
+            {item.title}
+          </Link>
         ))}
       </div>
     </MotionWrapper>
