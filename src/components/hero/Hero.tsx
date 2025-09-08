@@ -10,23 +10,6 @@ import { TrustedBy } from "./trusted-by/TrustedBy";
 import Link from "next/link";
 
 export const HeroSection = () => {
-  const scrollToContact = () => {
-    const element = document.querySelector("#contact");
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
-  const scrollToExpertise = () => {
-    const element = document.querySelector("#expertise");
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section
       id="home"

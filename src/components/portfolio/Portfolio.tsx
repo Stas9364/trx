@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export const PortfolioSection = () => {
@@ -101,11 +102,14 @@ export const PortfolioSection = () => {
               }}
               className="bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 object-cover"
+                width={405}
+                height={195}
               />
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                 <p className="text-gray-300 mb-4">{project.description}</p>

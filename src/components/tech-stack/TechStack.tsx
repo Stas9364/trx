@@ -3,7 +3,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-const technologies = [
+type Technology = {
+  id: string;
+  name: string;
+  category:
+    | "Frontend"
+    | "Backend"
+    | "AI/ML"
+    | "Cloud"
+    | "DevOps"
+    | "Database"
+    | "Language"
+    | "Mobile";
+  logo: string;
+};
+
+const technologies: Technology[] = [
   {
     id: "react",
     name: "React",
@@ -76,7 +91,8 @@ const technologies = [
     category: "Mobile",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   },
-] as any[];
+];
+
 const categories = [
   "All",
   "Frontend",
@@ -88,7 +104,6 @@ const categories = [
   "Mobile",
 ];
 
-// @component: TechnologiesSection
 export const TechnologiesSection = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
   const filteredTechnologies =
@@ -96,7 +111,6 @@ export const TechnologiesSection = () => {
       ? technologies
       : technologies.filter((tech) => tech.category === selectedCategory);
 
-  // @return
   return (
     <section id="technologies" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
