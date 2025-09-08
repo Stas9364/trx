@@ -79,11 +79,119 @@ const expertiseAreas: ExpertiseArea[] = [
     ],
     color: "from-orange-500 to-red-500",
   },
+  {
+    id: "healthcare",
+    icon: Server,
+    title: "Healthcare",
+    description:
+      "HIPAA-compliant healthcare platforms, EHR integrations, and telemedicine solutions",
+    features: [
+      "Patient portals & EHR",
+      "Telemedicine & WebRTC",
+      "Secure data handling",
+      "Compliance & auditing",
+    ],
+    color: "from-teal-500 to-emerald-500",
+  },
+  {
+    id: "fintech",
+    icon: Database,
+    title: "Fintech",
+    description:
+      "Financial apps with secure payments, KYC/AML, and real-time analytics",
+    features: [
+      "KYC/AML flows",
+      "Payment gateways",
+      "Fraud detection",
+      "Ledger & reporting",
+    ],
+    color: "from-yellow-500 to-amber-600",
+  },
+  {
+    id: "ecommerce",
+    icon: Cloud,
+    title: "E-commerce",
+    description:
+      "Scalable marketplaces, product catalogs, and conversion-optimized storefronts",
+    features: [
+      "Multi-vendor marketplaces",
+      "Catalog & search",
+      "Cart & checkout",
+      "Promotions & loyalty",
+    ],
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    id: "qa-testing",
+    icon: Code2,
+    title: "QA Testing",
+    description: "Automated and manual testing pipelines for quality at scale",
+    features: [
+      "E2E & integration tests",
+      "Performance testing",
+      "Accessibility checks",
+      "CI-driven coverage",
+    ],
+    color: "from-indigo-500 to-blue-500",
+  },
+  {
+    id: "blockchain",
+    icon: Cpu,
+    title: "Blockchain",
+    description: "Distributed apps, smart contracts, and on-chain integrations",
+    features: [
+      "Smart contracts",
+      "Wallet integrations",
+      "On-chain analytics",
+      "Cross-chain bridges",
+    ],
+    color: "from-cyan-500 to-sky-500",
+  },
+  {
+    id: "nft-crypto",
+    icon: Globe,
+    title: "NFT & Cryptocurrency",
+    description:
+      "NFT marketplaces, token utilities, and secure crypto operations",
+    features: [
+      "NFT minting & trading",
+      "Tokenomics & utilities",
+      "Marketplace features",
+      "Custody & security",
+    ],
+    color: "from-fuchsia-500 to-purple-600",
+  },
+  {
+    id: "erp-crm",
+    icon: Database,
+    title: "ERP / CRM Software",
+    description:
+      "Custom ERP/CRM системы для автоматизации бизнес-процессов и аналитики",
+    features: [
+      "Sales & pipelines",
+      "Inventory & procurement",
+      "Dashboards & analytics",
+      "Integrations (SAP, 1C, HubSpot)",
+    ],
+    color: "from-slate-500 to-gray-500",
+  },
+  {
+    id: "desktop-apps",
+    icon: Cpu,
+    title: "Desktop Application Development",
+    description:
+      "Кроссплатформенные desktop‑приложения (Windows/macOS/Linux) с автообновлениями",
+    features: [
+      "Electron & Tauri",
+      "Offline-first",
+      "OS integrations",
+      "Auto‑updates & signing",
+    ],
+    color: "from-violet-500 to-purple-500",
+  },
 ];
 
-// @component: ExpertiseSection
 export const ExpertiseSection = () => {
-  // @return
   return (
     <section id="expertise" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
       <div className="max-w-7xl mx-auto">
@@ -115,7 +223,7 @@ export const ExpertiseSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {expertiseAreas.map((area, index) => (
+          {expertiseAreas.map((area) => (
             <motion.div
               key={area.id}
               initial={{
@@ -131,7 +239,7 @@ export const ExpertiseSection = () => {
               }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.1,
+                delay: 0.1,
               }}
               className="group relative bg-gray-900 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 overflow-hidden"
             >

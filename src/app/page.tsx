@@ -6,7 +6,7 @@ import {
   ReviewsSection,
   TeamSection,
   TechnologiesSection,
-  WhyChooseSection
+  WhyChooseSection,
 } from "@/components";
 
 export default function Home() {
@@ -14,20 +14,19 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <ExpertiseSection />
+      <WhyChooseSection />
 
-      <TechnologiesSection />
+      <ExpertiseSection />
 
       <PortfolioSection />
 
-      <TeamSection />
-
-      <WhyChooseSection />
-
       <ReviewsSection />
 
-      <ContactsSection />
+      <TechnologiesSection />
 
+      <TeamSection />
+
+      <ContactsSection />
     </>
   );
 }
