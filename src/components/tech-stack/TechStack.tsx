@@ -165,7 +165,7 @@ export const TechnologiesSection = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
                 selectedCategory === category
                   ? "bg-blue-600 text-white shadow-lg"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -176,30 +176,10 @@ export const TechnologiesSection = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6"
-        >
-          {filteredTechnologies.map((tech, index) => (
-            <motion.div
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+          {filteredTechnologies.map((tech) => (
+            <div
               key={tech.id}
-              layout
-              initial={{
-                opacity: 0,
-                scale: 0.8,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-              }}
-              exit={{
-                opacity: 0,
-                scale: 0.8,
-              }}
-              transition={{
-                duration: 0.3,
-                delay: index * 0.05,
-              }}
               className="group bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex flex-col items-center text-center">
@@ -215,9 +195,9 @@ export const TechnologiesSection = () => {
                 <h3 className="text-white font-semibold mb-1">{tech.name}</h3>
                 <span className="text-blue-400 text-sm">{tech.category}</span>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{

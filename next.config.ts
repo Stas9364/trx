@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
     domains: ["images.unsplash.com"],
   },
   experimental: {
-    optimizePackageImports: ["lucide-react", "swiper"],
+    optimizePackageImports: ["lucide-react"],
   },
   poweredByHeader: false,
 };
