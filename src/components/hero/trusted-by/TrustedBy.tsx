@@ -1,6 +1,5 @@
 import Link from "next/link";
 import MotionWrapper from "../../motion-wrapper/MotionWrapper";
-import { span } from "framer-motion/client";
 
 type TrustedItem = {
   title: string;
