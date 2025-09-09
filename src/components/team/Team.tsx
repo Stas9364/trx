@@ -1,15 +1,21 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Github,
-  Linkedin
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Github, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-const teamMembers = [
+
+type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  expertise: string;
+  bio: string;
+  linkedin: string;
+};
+
+const teamMembers: TeamMember[] = [
   {
     id: "member-1",
     name: "Ekaterina B",
@@ -18,8 +24,7 @@ const teamMembers = [
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     expertise: "React, Next.js, Express, NestJS ",
     bio: "I am a full-stack architect who builds the production-ready backbone for your business. I translate vision into secure, scalable, and profitable systems.",
-    linkedin: "#",
-    github: "#",
+    linkedin: "",
   },
   {
     id: "member-2",
@@ -29,8 +34,7 @@ const teamMembers = [
       "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
     expertise: "Python, TensorFlow, Data Science",
     bio: "I am a dedicated Python developer who combines the skills of a full stack developer and an AI specialist. My goal is to be your go-to expert for high-quality, production-ready Python solutions.",
-    linkedin: "#",
-    github: "#",
+    linkedin: "",
   },
   {
     id: "member-3",
@@ -40,8 +44,7 @@ const teamMembers = [
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     expertise: "JS/TS, Python, C#, React, Django, LLMs",
     bio: "I’m a full-stack developer with 8+ years of experience building high-performance web applications that scale fast and deliver results. From FinTech to AI platforms.",
-    linkedin: "#",
-    github: "#",
+    linkedin: "",
   },
   {
     id: "member-4",
@@ -51,8 +54,7 @@ const teamMembers = [
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
     expertise: "React Native, Flutter, iOS/Android",
     bio: "I am your single point of technical leadership, building your entire product from a unified codebase for maximum speed and efficiency.",
-    linkedin: "#",
-    github: "#",
+    linkedin: "",
   },
 ];
 
@@ -187,18 +189,14 @@ export const TeamSection = () => {
 
                   {/* Social Links */}
                   <div className="flex gap-4 justify-center md:justify-start">
-                    <a
-                      href={teamMembers[currentIndex].linkedin}
-                      className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors group"
-                    >
-                      <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                    </a>
-                    <a
-                      href={teamMembers[currentIndex].github}
-                      className="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors group"
-                    >
-                      <Github className="w-5 h-5 text-gray-400 group-hover:text-white" />
-                    </a>
+                    {teamMembers[currentIndex].linkedin && (
+                      <a
+                        href={teamMembers[currentIndex].linkedin}
+                        className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors group"
+                      >
+                        <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
