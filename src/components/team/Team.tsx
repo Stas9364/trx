@@ -1,9 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Github, Linkedin } from "lucide-react";
+import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 type TeamMember = {
   id: string;
@@ -86,6 +87,11 @@ export const TeamSection = () => {
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
+
+  const expertiseTags = useMemo(() => {
+    return teamMembers[currentIndex].expertise.split(", ");
+  }, [currentIndex]);
+
   return (
     <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
       <div className="max-w-7xl mx-auto">
@@ -175,16 +181,14 @@ export const TeamSection = () => {
 
                   {/* Expertise Tags */}
                   <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
-                    {teamMembers[currentIndex].expertise
-                      .split(", ")
-                      .map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-500/30"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                    {expertiseTags.map((skill: string) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-500/30"
+                      >
+                        {skill}
+                      </span>
+                    ))}
                   </div>
 
                   {/* Social Links */}
