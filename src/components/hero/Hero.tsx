@@ -80,7 +80,11 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <Link
-              href={"#contacts"}
+              href={
+                "https://www.upwork.com/services/product/development-it-eye-catching-front-end-development-and-design-1735599511920140288?ref=fl_profile"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-400 flex items-center justify-center shadow-lg hover:shadow-blue-500/25"
             >
               <span>Start Your Project</span>
@@ -101,11 +105,15 @@ export const HeroSection = () => {
 
           <TrustedBy
             trustedList={[
-              { title: "CRYPTOPAY", href: "#", color: "#f4f5fb" },
-              { title: "SCALE", href: "#", color: "" },
-              { title: "NEXT STREET", href: "#", color: "" },
-              { title: "Arcade", href: "#", color: "" },
-              { title: "15SOF", href: "#", color: "" },
+              { title: "CRYPTOPAY", href: "https://cryptopay.me/", color: "" },
+              { title: "SCALE", href: "https://scale.com/", color: "" },
+              {
+                title: "NEXT STREET",
+                href: "https://nextstreet.com/",
+                color: "",
+              },
+              { title: "Arcade", href: "https://www.arcade.ai/", color: "" },
+              { title: "15SOF", href: "", color: "" },
             ]}
           />
         </div>

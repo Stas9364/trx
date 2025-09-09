@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const ContactsSection = () => {
   return (
@@ -33,12 +34,26 @@ export const ContactsSection = () => {
             your goals with cutting-edge technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            <Link
+              href={
+                "https://www.upwork.com/services/product/development-it-eye-catching-front-end-development-and-design-1735599511920140288?ref=fl_profile"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            >
               Start Your Project
-            </button>
-            <button className="border cursor-pointer border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+            </Link>
+            <Link
+              href={
+                "https://www.upwork.com/services/consultation/development-it-ekaterina-1743210048014413824"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border cursor-pointer border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+            >
               Schedule Consultation
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

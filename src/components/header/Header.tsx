@@ -1,10 +1,11 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { MobileNavMenu, NavMenu } from "./nav-menu";
 import MotionWrapper from "../motion-wrapper/MotionWrapper";
+import { MobileNavMenu, NavMenu } from "./nav-menu";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ export const Header = () => {
             className="flex items-center"
           >
             <Link href={"/"} className="text-2xl font-bold text-blue-400">
-              TRX Developers
+              <Image src="/trx-logo-1.png" width={100} height={50} alt="TRX Logo" />
             </Link>
           </MotionWrapper>
 
