@@ -23,73 +23,73 @@ const technologies: Technology[] = [
     id: "react",
     name: "React",
     category: "Frontend",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    logo: "/tech-stack/react-original.svg",
   },
   {
     id: "nodejs",
     name: "Node.js",
     category: "Backend",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    logo: "/tech-stack/nodejs-original.svg",
   },
   {
     id: "python",
     name: "Python",
     category: "AI/ML",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    logo: "/tech-stack/python-original.svg",
   },
   {
     id: "aws",
     name: "AWS",
     category: "Cloud",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+    logo: "/tech-stack/amazonwebservices-original.svg",
   },
   {
     id: "typescript",
     name: "TypeScript",
     category: "Language",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    logo: "/tech-stack/typescript-original.svg",
   },
   {
     id: "docker",
     name: "Docker",
     category: "DevOps",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    logo: "/tech-stack/docker-original.svg",
   },
   {
     id: "kubernetes",
     name: "Kubernetes",
     category: "DevOps",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    logo: "/tech-stack/kubernetes-plain.svg",
   },
   {
     id: "postgresql",
     name: "PostgreSQL",
     category: "Database",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+    logo: "/tech-stack/postgresql-original.svg",
   },
   {
     id: "mongodb",
     name: "MongoDB",
     category: "Database",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    logo: "/tech-stack/mongodb-original.svg",
   },
   {
     id: "nextjs",
     name: "Next.js",
     category: "Frontend",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    logo: "/tech-stack/nextjs-original.svg",
   },
   {
     id: "tensorflow",
     name: "TensorFlow",
     category: "AI/ML",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+    logo: "/tech-stack/tensorflow-original.svg",
   },
   {
     id: "flutter",
     name: "Flutter",
     category: "Mobile",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    logo: "/tech-stack/flutter-original.svg",
   },
 ];
 
@@ -106,6 +106,7 @@ const categories = [
 
 export const TechnologiesSection = () => {
   const [selectedCategory, setSelectedCategory] = React.useState("All");
+  
   const filteredTechnologies =
     selectedCategory === "All"
       ? technologies
